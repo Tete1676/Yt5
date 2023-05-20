@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code de Pagamento</title>
+  <style>
+    #qrcode {
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>QR Code de Pagamento</h1>
+  <div id="qrcode"></div>
+
+  <script src="qrcode.min.js"></script>
+  <script>
+    const cpf = '15879068723';
+    const qrcodeDiv = document.getElementById('qrcode');
+    const qrcode = new QRCode(qrcodeDiv, {
+      text: cpf,
+      width: 128,
+      height: 128
+    });
+  </script>
+</body>
+</html>
